@@ -7,7 +7,7 @@ registerForm.addEventListener('submit', async (event) => {
   const data = Object.fromEntries(formData);
 
   try {
-    const response = await fetch('/api/register', { 
+    const response = await fetch('https://your-backend-project-id.vercel.app/api/register', { 
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -25,7 +25,7 @@ registerForm.addEventListener('submit', async (event) => {
       // You might want to redirect to a success page instead of 
       // directly to verifyEmail.html, as the verification link 
       // will be sent to the user's email.
-      // window.location.href = 'verifyEmail.html'; 
+      // window.location.href = 'success.html'; 
     }
   } catch (error) {
     console.error('Error during registration:', error);
