@@ -16,14 +16,16 @@ registerForm.addEventListener('submit', async (event) => {
     });
 
     if (!response.ok) {
-      const errorData = await response.json(); // Try to get error details from the server
+      const errorData = await response.json(); 
       console.error('Registration failed:', errorData.message || response.status); 
-      // Display a more specific error message to the user
       alert('Registration failed. ' + (errorData.message || 'Please try again.')); 
     } else {
       console.log('Registration successful!');
-      // Redirect to verification page
-      window.location.href = 'verifyEmail.html';
+      alert('Registration successful! Please check your email for verification.'); 
+      // You might want to redirect to a success page instead of 
+      // directly to verifyEmail.html, as the verification link 
+      // will be sent to the user's email.
+      // window.location.href = 'verifyEmail.html'; 
     }
   } catch (error) {
     console.error('Error during registration:', error);
