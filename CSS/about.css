@@ -112,3 +112,13 @@ body {
     justify-items: center;
     margin-bottom: 100px;
 }
+
+/* Responsive font size */
+h1 {
+    font-size: clamp(1.5rem, 2.5vw, 3rem);
+}
+
+/* Responsive width */
+.container {
+    width: clamp(300px, 50%, 800px);
+}
